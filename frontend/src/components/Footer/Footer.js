@@ -9,11 +9,13 @@ const Footer = () => {
         bottom: 0,
         display: 'flex',
         justifyContent: 'center',
+        backgroundColor: '#158cba',
+        color: '#333',
       }}
     >
       <Container>
         <Row>
-          <Col className="text-center py-3">Copyright &copy; Notes App</Col>
+          <Col className="text-center py-3">Copyright &copy; Thuc Cao</Col>
         </Row>
       </Container>
     </footer>
