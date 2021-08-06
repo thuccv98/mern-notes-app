@@ -3,6 +3,8 @@ const notes = require('./data/notes');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
+const noteRoutes = require('./routes/noteRoutes');
+
 const { notFound, errorHandler } = require('./middlewares/errorMiddleware');
 
 const app = express();
@@ -16,6 +18,7 @@ app.use(express.json());
 
 // use routes
 app.use('/api/users', userRoutes);
+app.use('/api/notes', noteRoutes);
 
 //middleware handle error
 app.use(notFound);
