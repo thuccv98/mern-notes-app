@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteNoteAction, listNotes } from '../../actions/notesActions';
 import Loading from '../../components/Loading';
 import ErrorMessage from '../../components/ErrorMessage';
+import ReactMarkdown from 'react-markdown';
 
 const MyNotes = ({ search }) => {
   const dispatch = useDispatch();
@@ -112,7 +113,9 @@ const MyNotes = ({ search }) => {
                       </Badge>
                     </h4>
                     <blockquote className="blockquote mb-0">
-                      <p>{note.content}</p>
+                      <p>
+                        <ReactMarkdown>{note.content}</ReactMarkdown>
+                      </p>
                       <footer className="blockquote-footer">
                         Created On{' '}
                         <cite title="Source Title">
